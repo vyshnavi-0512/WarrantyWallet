@@ -98,8 +98,17 @@ https://drive.google.com/file/d/1wjsU1Phyg_Jgfje_YTD8IuGlyRMcoYIi/view?usp=drive
 - **AI:** OpenAI / Claude  
 - **Tools:** Ngrok  
 
----
+## Run Locally
+git clone https://github.com/your-username/WarrantyWallet.git
+cd WarrantyWallet
+Open index.html in your browser (or use VS Code)
+Start n8n:
+npx n8n start
+(Optional) Expose webhook using ngrok:
+ngrok http 5678
+✅ Done!
 
+Upload a receipt and the system will process it automatically.
 ## 👩‍💻 Author
 
 **Vyshnavi Madishetti**
