@@ -1,0 +1,139 @@
+{
+  "name": "WarrantyWallet",
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.ocr.space/parse/image",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "K89579427288957"
+            },
+            {
+              "name": "language",
+              "value": "eng"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "file"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "97301afa-c634-4a61-bd61-bd2e02787d8c",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "/upload-receipt",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "52dc63fe-35f5-4fc6-9404-ffe33a66dc73",
+      "name": "Webhook",
+      "webhookId": "0077e6df-b29b-40fc-a28e-593b7424cbfe"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a012b79c-68c5-43d2-a5f5-df9b811e96db",
+              "name": "text",
+              "value": "={{$json[\"ParsedResults\"][0][\"ParsedText\"]}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        416,
+        0
+      ],
+      "id": "1058f003-622d-48de-923d-cb21b555888e",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        592,
+        0
+      ],
+      "id": "ff2142e9-303d-47b4-8c02-98632b3d19c8",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "a27ac08b-cd28-4fee-8bd0-44abbe8d48d2",
+  "meta": {
+    "instanceId": "c51121756ad74f83ec88180023612e988ab32ff696aea53786bdce300a1b38ec"
+  },
+  "id": "EQfl9P9sAo6QfkUu",
+  "tags": []
+}
