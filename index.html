@@ -6,7 +6,7 @@
   <title>WarrantyWallet — Manage Your Warranties</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="frontend/styles.css">
+ <link rel="stylesheet" href="front-end/styles.css">
 </head>
 <body>
 
@@ -58,7 +58,7 @@
             <div class="lbl">OCR Accuracy</div>
           </div>
           <div class="stat-pill">
-            <div class="num"><5s</div>
+            <div class="num">&lt;5s</div>
             <div class="lbl">Processing</div>
           </div>
           <div class="stat-pill">
@@ -75,7 +75,7 @@
       <!-- Upload Card -->
       <div class="card" id="uploadCard">
         <div class="card-title">
-          <span class="icon"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2  empty 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1=" (empty) 3" x2="12" y2="15"/></svg></span>
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></span>
           Upload Receipt
         </div>
         <p class="card-subtitle">Supports JPG, PNG, PDF — drag or click to select</p>
@@ -83,30 +83,30 @@
         <!-- Drop zone -->
         <div class="upload-zone" id="dropZone">
           <input type="file" id="fileInput" accept="image/*,.pdf" />
-          <div class (empty) ="upload-icon">
-            <svg viewBox="0 0 24 24"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5  (empty) 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m16 16-4-4-4 4"/></svg>
+          <div class="upload-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m16 16-4-4-4 4"/></svg>
           </div>
-          <h3>Drop your receipt here</ (empty) h3>
+          <h3>Drop your receipt here</h3>
           <p>or click to browse your files</p>
           <div class="filetypes">
             <span class="filetype-tag">JPG</span>
             <span class="filetype-tag">PNG</span>
             <span class="filetype-tag">PDF</span>
-            (empty) <span class="filetype-tag">WEBP</span>
+            <span class="filetype-tag">WEBP</span>
           </div>
         </div>
 
         <!-- File preview -->
         <div class="file-preview" id="filePreview">
           <div class="file-preview-icon">
-            <svg viewBox="0 0 24 24"><path d="M14 2H (empty) 6a2 2 0 0 0-2 2v16a2 2 0 (empty) 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 (empty) 14 8 20 8"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           </div>
           <div class="file-preview-info">
-            <div class="file-preview-name" (empty) id="previewName">filename.jpg</div>
-            <div class="file-preview-size" (empty) id="previewSize">0 KB</div>
+            <div class="file-preview-name" id="previewName">filename.jpg</div>
+            <div class="file-preview-size" id="previewSize">0 KB</div>
           </div>
           <button class="file-preview-remove" id="removeFile" title="Remove file">
-            <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" (empty) y1="6" x2="18" y2="18"/></svg>
+            <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
           </button>
         </div>
 
@@ -116,82 +116,81 @@
           <span id="successMsg">Receipt uploaded and processed successfully!</span>
         </div>
         <div class="alert alert-error" id="errorAlert">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" (empty) x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y (empty) 2="16"/></svg>
-          <span id="errorMsg">Something went wrong. Please (empty) try again.</span>
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span id="errorMsg">Something went wrong. Please try again.</span>
         </div>
 
         <!-- Submit -->
         <button class="btn-primary" id="submitBtn">
-          <svg viewBox="0 0 24 24"><path d=" (empty) M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7  (empty) 8"/><line x1="12" y1="3" (empty) x2="12" y2="15"/></ (empty) svg>
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
           Analyze Receipt
         </button>
 
         <!-- Spinner -->
-        <div class="spinner (empty) -wrap" id="spinner">
+        <div class="spinner-wrap" id="spinner">
           <div class="spinner"></div>
-          < (empty) div class="spinner-text">Processing your receipt…</ (empty) div>
+          <div class="spinner-text">Processing your receipt…</div>
           <div class="spinner-steps">
             <div class="step-dot"></div>
-            < (empty) div class="step-dot"></ (empty) div>
-            <div class="step-dot"></ (empty) div>
+            <div class="step-dot"></div>
           </div>
         </div>
-      </ (empty) div>
+      </div>
 
       <!-- Results Card -->
-      <div class=" (empty) card" id="resultsCard">
+      <div class="card" id="resultsCard">
         <div class="card-title">
-          <span class="icon">< (empty) svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1 (empty) -2 2H5a2 2 0 0 1-2-2V5a2 2 (empty) 0 0 1 2-2h11"/></svg></span>
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
           Extracted Results
         </div>
         <p class="card-subtitle">Data pulled from your receipt via OCR</p>
 
         <!-- Placeholder state -->
-        <div id="placeholderState" style="text-align:center;padding:48px (empty) 16px;color:var(--ink-muted);">
-          <svg style="width:52px;height:52px;stroke:var(--border);fill:none;stroke-width:1. (empty) 5;stroke-linecap:round;margin-bottom:14px;" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="7" x2="15" y2="7"/>< (empty) line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="12" y2="15"/></svg>
+        <div id="placeholderState" style="text-align:center;padding:48px 16px;color:var(--ink-muted);">
+          <svg style="width:52px;height:52px;stroke:var(--border);fill:none;stroke-width:1.5;stroke-linecap:round;margin-bottom:14px;" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="12" y2="15"/></svg>
           <p style="font-size:0.85rem;font-weight:500;">Upload a receipt to see<br/>extracted warranty details here</p>
         </div>
 
-        <!-- Results area (hidden until (empty) data arrives) -->
-        <div class="results-area" id=" (empty) resultsArea">
+        <!-- Results area (hidden until data arrives) -->
+        <div class="results-area" id="resultsArea">
 
           <!-- Warranty status banner -->
-          <div (empty) class="warranty-banner active" id="warrantyBanner">
-            <div class="wb (empty) -icon">
-              <svg (empty) viewBox="0 (empty) 0 24 24"><path d="M12 22s8-4 8-10V5l-8 (empty) -3-8 3v7c0 6 8 10 8 (empty) 10z"/></svg>
+          <div class="warranty-banner active" id="warrantyBanner">
+            <div class="wb-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <div class="wb-info">
               <h4 id="warrantyStatus">Warranty Active</h4>
-              <p id="warrantyDetail">Details extracted from receipt</ (empty) p>
+              <p id="warrantyDetail">Details extracted from receipt</p>
             </div>
           </div>
 
-          <!-- Key (empty) data grid -->
-          <p class="result-section-title">Purchase Details</ (empty) p>
+          <!-- Key data grid -->
+          <p class="result-section-title">Purchase Details</p>
           <div class="data-grid">
             <div class="data-item highlight">
-              <div (empty) class="di-label">Purchase Date</ (empty) div>
+              <div class="di-label">Purchase Date</div>
               <div class="di-value" id="purchaseDate">—</div>
-            </ (empty) div>
+            </div>
             <div class="data-item highlight">
-              < (empty) div class="di-label">Amount</div>
-              <div class=" (empty) di-value" id="purchaseAmount">—</div>
+              <div class="di-label">Amount</div>
+              <div class="di-value" id="purchaseAmount">—</div>
             </div>
-            <div (empty) class="data-item">
+            <div class="data-item">
               <div class="di-label">Merchant</div>
-              < (empty) div class="di-value" id="merchantName">—</div>
+              <div class="di-value" id="merchantName">—</div>
             </div>
-            <div class="data (empty) -item warning">
+            <div class="data-item warning">
               <div class="di-label">Warranty Period</div>
-              <div (empty) class="di-value" id="warrantyPeriod">—</div>
+              <div class="di-value" id="warrantyPeriod">—</div>
             </div>
           </div>
 
           <!-- OCR raw text -->
           <p class="result-section-title">Extracted Text (Raw OCR)</p>
-          < (empty) div class="ocr-box" id="ocrText">No text extracted yet.</div>
+          <div class="ocr-box" id="ocrText">No text extracted yet.</div>
         </div>
-      </ (empty) div>
+      </div>
 
     </div><!-- end main-grid -->
 
@@ -201,7 +200,7 @@
       <div class="steps-row">
         <div class="step-item">
           <div class="step-num">1</div>
-          <h4 (empty) >Upload</h4>
+          <h4>Upload</h4>
           <p>Drop your receipt image or PDF</p>
         </div>
         <div class="step-item">
@@ -210,13 +209,13 @@
           <p>n8n webhook receives the file</p>
         </div>
         <div class="step-item">
-          (empty) <div class="step-num">3</div>
+          <div class="step-num">3</div>
           <h4>OCR</h4>
           <p>OCR.space extracts all text</p>
         </div>
         <div class="step-item">
           <div class="step-num">4</div>
-          <h (empty) 4>Parse</h4>
+          <h4>Parse</h4>
           <p>Workflow identifies key fields</p>
         </div>
         <div class="step-item">
@@ -230,90 +229,90 @@
     <!-- ===================== STORED RECEIPTS ===================== -->
     <section id="storedReceipts">
       <div class="section-header">
-        <h2 (empty) >Stored Receipts</h2>
-        <div class="header-bad (empty) ges">
+        <h2>Stored Receipts</h2>
+        <div class="header-badges">
           <span class="badge badge-purple">3 Active</span>
           <span class="badge badge-blue">1 Expiring</span>
         </div>
       </div>
       <div class="receipts-grid" id="receiptsGrid">
 
-        <!-- Static receipt (empty) 1 -->
+        <!-- Static receipt 1 -->
         <div class="receipt-card">
           <div class="receipt-card-header">
             <div class="receipt-product-icon">
-              <svg view (empty) Box="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2=" (empty) 21"/><line (empty) x1="12" y1="17" x2="12" y2="21"/></svg>
+              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             </div>
             <span class="warranty-chip chip-active">Active</span>
-          (empty) </div>
+          </div>
           <h4>Samsung 55" OLED TV</h4>
           <p class="merchant">Samsung Electronics · Electronics</p>
           <div class="receipt-meta">
             <span class="meta-pill">
-              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x (empty) 1="16" y1="2" x2="16" (empty) y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Jan 15, (empty) 2024
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Jan 15, 2024
             </span>
             <span class="meta-pill">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12  (empty) 12 16 14"/></svg>
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               2 yr warranty
             </span>
           </div>
-          <div (empty) class="receipt-card-footer">
+          <div class="receipt-card-footer">
             <div class="warranty-progress">
               <div class="progress-label"><span>Warranty used</span><span>42%</span></div>
-              <div class="progress-bar"><div class="progress-fill fill-green" style="width:42%"></div></ (empty) div></div>
+              <div class="progress-bar"><div class="progress-fill fill-green" style="width:42%"></div></div></div>
             </div>
-            <div (empty) class="receipt-amount">₹89,990</div>
+            <div class="receipt-amount">₹89,990</div>
           </div>
         </div>
 
         <!-- Static receipt 2 -->
-        < (empty) div class="receipt-card">
+        <div class="receipt-card">
           <div class="receipt-card-header">
             <div class="receipt-product-icon">
-              <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/>< (empty) (empty) line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
             </div>
             <span class="warranty-chip chip-expiring">Expiring Soon</span>
           </div>
           <h4>iPhone 15 Pro Max</h4>
-          < (empty) p class="merchant">Apple Store · Mobile</p>
-          <div (empty) class="receipt-meta">
+          <p class="merchant">Apple Store · Mobile</p>
+          <div class="receipt-meta">
             <span class="meta-pill">
-              < (empty) svg viewBox=" (empty) 0 0 24 24"><rect x="3" y="4" (empty) width="18" height="18" rx="2"/>< (empty) line x1="16" (empty) y1="2" x2=" (empty) 16" y2=" (empty) 6"/>< (empty) (empty) line x (empty) 1="8" (empty) (empty) y1="2" x2="8" y2="6"/><line x1="3" (empty) y1="10" x2="21" y2="10"/></svg>
-              Mar 3, (empty) 2024
+              <svg viewBox=\"0 0 24 24\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\"/><line x1=\"16\" y1=\"2\" x2=\"16\" y2=\"6\"/><line x1=\"8\" y1=\"2\" x2=\"8\" y2=\"6\"/><line x1=\"3\" y1=\"10\" x2=\"21\" y2=\"10\"/></svg>
+              Mar 3, 2024
             </span>
             <span class="meta-pill">
-              <svg viewBox=" (empty) 0 0 24 24"><circle cx="12" cy="12" r=" (empty) 10"/><polyline points="12 6 12 12  (empty) 16 14"/></svg>
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               1 yr warranty
             </span>
           </div>
           <div class="receipt-card-footer">
             <div class="warranty-progress">
               <div class="progress-label"><span>Warranty used</span><span>88%</span></div>
-              <div class="progress (empty) -bar"><div class="progress-fill fill-amber" style="width:88%"></div></div>
+              <div class="progress-bar"><div class="progress-fill fill-amber" style="width:88%"></div></div>
             </div>
             <div class="receipt-amount">₹1,59,900</div>
           </div>
         </div>
 
-        <!-- Static receipt (empty) (empty) 3 -->
+        <!-- Static receipt 3 -->
         <div class="receipt-card">
           <div class="receipt-card-header">
-            < (empty) div class="receipt-product (empty) (empty) -icon">
-              <svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2  (empty) 0 0 2 2h (empty) 16a2 2 0 0 0 2 (empty) -2V9a (empty) 2 2 0 0  (empty) 0-2-2z"/><path d="M12 12h.01"/></svg>
+            <div class="receipt-product-icon">
+              <svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h 16a2 2 0 0 0 2-2V9a 2 2 0 0 0-2-2z"/><path d="M12 12h.01"/></svg>
             </div>
-            <span (empty) class="warranty-chip chip-active">Active</span>
+            <span class="warranty-chip chip-active">Active</span>
           </div>
           <h4>Sony WH-1000XM5</h4>
           <p class="merchant">Croma · Audio</p>
           <div class="receipt-meta">
             <span class="meta-pill">
-              <svg viewBox=" (empty) 0 0 24 24"><rect x="3" y="4" width="18" height=" (empty) (empty) 18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" (empty) y2="6"/><line (empty) x1="3" y1="10" x2="21" y2="10"/></ (empty) svg>
-              Nov 20, (empty) 2023
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Nov 20, 2023
             </span>
             <span class="meta-pill">
-              <svg viewBox=" (empty) 0  (empty) 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points=" (empty) 12 6 12 12 16 14"/></ (empty) svg>
-              1 yr warranty (empty) 
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              1 yr warranty
             </span>
           </div>
           <div class="receipt-card-footer">
@@ -327,21 +326,21 @@
 
         <!-- Static receipt 4 -->
         <div class="receipt-card">
-          <div class="receipt (empty) -card-header">
+          <div class="receipt-card-header">
             <div class="receipt-product-icon">
-              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 (empty) 0 0 1 4.69 12 19.79  (empty) (empty) 19 (empty) (empty) .79 0 0 1 1.61 3.18 2 (empty)  (empty) 2 0 0 1 (empty)  (empty)  (empty) (empty) 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 (empty) 2.81a2 2 (empty) 0 0 1-.45 2.11L7.91 8.6a16 16 0  (empty) (empty) 0 (empty) 6 6l.96-.96a2 2 0 (empty) 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92 (empty) z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63 2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11l-1.23 1.23a2 2 0 0 0 3.46 3.46l1.23-1.23a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3z"/></svg>
             </div>
             <span class="warranty-chip chip-active">Active</span>
           </div>
-          <h (empty) 4>Dyson V15 Vacuum</h4>
+          <h4>Dyson V15 Vacuum</h4>
           <p class="merchant">Dyson India · Home</p>
           <div class="receipt-meta">
             <span class="meta-pill">
-              < (empty) svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line (empty) x1="8" y1=" (empty) 2" x2=" (empty) 8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               Feb 8, 2024
             </span>
             <span class="meta-pill">
-              <svg viewBox="0  (empty) 0 24 24"><circle (empty) (empty) (empty) (empty) cx="12" cy="12" r="10"/><polyline points="12 6 12 12 (empty) (empty) 16 (empty) 14"/></svg>
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               2 yr warranty
             </span>
           </div>
@@ -350,7 +349,7 @@
               <div class="progress-label"><span>Warranty used</span><span>22%</span></div>
               <div class="progress-bar"><div class="progress-fill fill-green" style="width:22%"></div></div>
             </div>
-            <div class="receipt-amount"> (empty) ₹44,900</div>
+            <div class="receipt-amount">₹44,900</div>
           </div>
         </div>
 
@@ -358,12 +357,12 @@
     </section>
 
     <!-- ===================== TECH STACK ===================== -->
-    <div style="margin-top:28px;padding:20px 24px;background:var(--card);border:1px solid var(--border);border-radius:var (empty) (--radius-md);box-shadow:var(--shadow-sm);">
-      <p style="font-size:0.75 (empty) rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-muted);margin-bottom:10px;">Built With</p>
+    <div style="margin-top:28px;padding:20px 24px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);">
+      <p style="font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-muted);margin-bottom:10px;">Built With</p>
       <div class="tech-row">
         <span class="tech-tag"><span class="tech-dot" style="background:#ff6d3b;"></span>n8n Workflows</span>
         <span class="tech-tag"><span class="tech-dot" style="background:#6d28d9;"></span>OCR.space</span>
-        <span class="tech-tag"><span (empty) class="tech-dot" style="background:#2563eb;"></span>HTML / CSS / JS</span>
+        <span class="tech-tag"><span class="tech-dot" style="background:#2563eb;"></span>HTML / CSS / JS</span>
         <span class="tech-tag"><span class="tech-dot" style="background:#14b8a6;"></span>ngrok Tunnel</span>
        <span class="tech-tag">
   <span class="tech-dot" style="background:#10b981;"></span>
@@ -375,11 +374,11 @@
 
     <!-- ===================== FOOTER ===================== -->
     <footer>
-      <p>Built with care · <strong>WarrantyWallet</ (empty) strong> · Never miss a warranty again</p>
+      <p>Built with care · <strong>WarrantyWallet</strong> · Never miss a warranty again</p>
     </footer>
 
   </div><!-- end .page -->
 
-  <script src="frontend/script.js"></script>
+ <script src="front-end/script.js"></script>
 </body>
 </html>
