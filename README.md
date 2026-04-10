@@ -48,7 +48,14 @@ WarrantyWallet solves this by:
 - ⏰ Warranty expiry tracking  
 - 🔔 Reminder notifications  
 - 📊 Dashboard (upcoming expiries)  
-- 💾 Local storage / database support  
+- 💾 Local storage / database support
+
+  ## Screenshots
+  ![UI](screenshots/workflow.png)
+  ![UI](screenshots/ui-home.png)
+  ![UI](screenshots/ui-dashboard.png)
+  ![UI](screenshots/ui-upload-analysis.png)
+![UI](screenshots/ui-receipts-list.png)
 
 ---
 ##  Demo Recording
@@ -82,6 +89,7 @@ https://drive.google.com/file/d/1wjsU1Phyg_Jgfje_YTD8IuGlyRMcoYIi/view?usp=drive
 6. Reminder is scheduled  
 
 ---
+
 
 ## 🛠️ Tech Stack
 
